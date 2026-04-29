@@ -48,3 +48,9 @@ function mostrarClima(datos, ciudad) {
     resultado.innerHTML = "<p>No se pudieron mostrar los datos</p>";
   }
 }
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js")
+    .then(() => console.log("Service Worker registrado"))
+    .catch(err => console.log("Error SW", err));
+}
